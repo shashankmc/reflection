@@ -1,0 +1,72 @@
+{
+  "package_id": "bluelab.reflection",
+  "package_version": "0.1.0",
+  "package_type": "legalblocks.module_package",
+  "artifact_types": [
+    {
+      "id": "bluelab.reflection",
+      "label": "reflection",
+      "color": "#4F6E9E",
+      "short": "reflect"
+    }
+  ],
+  "modules": [
+    {
+      "module_id": "reflection",
+      "label": "AI-Use Reflection",
+      "category": "export",
+      "glyph": "❖",
+      "family": "export",
+      "display": {
+        "sub": "reflection · AI use / corrections / judgement",
+        "note": "Structured reflection; anti rubber-stamp guardrail blocks empty attestations"
+      },
+      "inputs": [
+        {
+          "port_id": "memo",
+          "artifact_type": "bluelab.memo",
+          "capabilities": [
+            "optional"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "port_id": "reflection",
+          "artifact_type": "bluelab.reflection"
+        }
+      ],
+      "configuration": {
+        "parameters": [
+          {
+            "name": "reflection_endpoint",
+            "type": "artifact_endpoint",
+            "label": "Reflection store",
+            "artifact_key": "bl-reflection",
+            "match": "exact",
+            "default": {
+              "adapter": "local"
+            }
+          }
+        ]
+      },
+      "execution": {
+        "type": "backend",
+        "entrypoint": "reflection.ts"
+      },
+      "permissions": [],
+      "requires_auth": true,
+      "provides_screen": {
+        "screen_type_id": "bluelab.reflect",
+        "label": "Reflection",
+        "glyph": "❖",
+        "desc": "Document where you used AI, corrected it, and applied professional judgement (Step 6).",
+        "needs": [
+          "bluelab.reflection"
+        ],
+        "optional": [],
+        "page_template": "pages/reflect.vue"
+      }
+    }
+  ]
+}

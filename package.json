@@ -1,0 +1,33 @@
+{
+  "name": "@legalblocks/bl-reflection",
+  "version": "0.1.0",
+  "description": "Structured reflection; anti rubber-stamp guardrail blocks empty attestations",
+  "private": false,
+  "type": "module",
+  "license": "MIT",
+  "legalblocks": {
+    "package_id": "bluelab.reflection",
+    "manifest": "package.manifest.json",
+    "execution_type": "backend",
+    "provides_screen": "bluelab.reflect"
+  },
+  "main": "reflection.ts",
+  "files": [
+    "package.manifest.json",
+    "src",
+    "pages",
+    "*.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "tsx reflection.test.ts"
+  },
+  "dependencies": {
+    "@legalblocks/module-runtime": "^0.1.0"
+  },
+  "devDependencies": {
+    "@lawnotation/module-sdk": "^1.0.0",
+    "typescript": "^5.4.0",
+    "tsx": "^4.7.0"
+  }
+}
