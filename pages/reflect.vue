@@ -1,7 +1,7 @@
 <template>
   <div class="lb-page page-reflect">
     <div class="page-header">
-      <div class="eyebrow">bluelab · step 6</div>
+      <div class="eyebrow">compliance · step 5</div>
       <h1 class="serif page-title">Reflection on AI Use</h1>
       <p class="page-sub mono">Account for how you used AI. A reflection cannot be submitted until each prompt is answered with substance.</p>
     </div>
@@ -41,7 +41,7 @@
 import { reactive, computed, watch, ref } from 'vue'
 import { useArtifact } from '@legalblocks/module-runtime'
 
-const reflectionOut = useArtifact('bl-reflection')
+const reflectionOut = useArtifact('reflection')
 
 const MIN_WORDS = 5
 const words = (s) => { const t = (s || '').trim(); return t ? t.split(/\s+/).length : 0 }
@@ -72,10 +72,10 @@ const firstFailure = computed(() => failures.value[0] || '')
 
 function persist() {
   reflectionOut.write({
-    artifact_type: 'bluelab.reflection',
+    artifact_type: 'reflection',
     schema_version: '0.1.0',
     payload: { ...form },
-    lineage: { produced_by_package: 'bluelab.reflection', produced_by_module: 'reflection' },
+    lineage: { produced_by_package: 'reflection', produced_by_module: 'reflection' },
   }).catch(() => {})
 }
 watch(form, persist, { deep: true })

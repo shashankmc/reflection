@@ -1,10 +1,10 @@
 {
-  "package_id": "bluelab.reflection",
+  "package_id": "reflection",
   "package_version": "0.1.0",
   "package_type": "legalblocks.module_package",
   "artifact_types": [
     {
-      "id": "bluelab.reflection",
+      "id": "reflection",
       "label": "reflection",
       "color": "#4F6E9E",
       "short": "reflect"
@@ -24,7 +24,7 @@
       "inputs": [
         {
           "port_id": "memo",
-          "artifact_type": "bluelab.memo",
+          "artifact_type": "memo",
           "capabilities": [
             "optional"
           ]
@@ -33,7 +33,7 @@
       "outputs": [
         {
           "port_id": "reflection",
-          "artifact_type": "bluelab.reflection"
+          "artifact_type": "reflection"
         }
       ],
       "configuration": {
@@ -42,7 +42,7 @@
             "name": "reflection_endpoint",
             "type": "artifact_endpoint",
             "label": "Reflection store",
-            "artifact_key": "bl-reflection",
+            "artifact_key": "reflection",
             "match": "exact",
             "default": {
               "adapter": "local"
@@ -57,12 +57,12 @@
       "permissions": [],
       "requires_auth": true,
       "provides_screen": {
-        "screen_type_id": "bluelab.reflect",
+        "screen_type_id": "reflect",
         "label": "Reflection",
         "glyph": "❖",
-        "desc": "Document where you used AI, corrected it, and applied professional judgement (Step 6).",
+        "desc": "Document where you used AI, corrected it, and applied professional judgement (Step 5).",
         "needs": [
-          "bluelab.reflection"
+          "reflection"
         ],
         "optional": [],
         "page_template": "pages/reflect.vue"

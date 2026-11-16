@@ -1,6 +1,6 @@
 /**
- * Tests for the BlueLab reflection guardrail.
- * Run: npx tsx modules/bl-reflection/reflection.test.ts
+ * Tests for the reflection guardrail.
+ * Run: npx tsx modules/reflection/reflection.test.ts
  */
 import assert from 'node:assert';
 import { validateReflection, type ReflectionPayload } from './reflection.ts';
@@ -50,4 +50,4 @@ ok('a rubber-stamp reflection (no concrete correction or judgement) is blocked',
   assert.ok(r.failures.some(f => f.rule === 'rubber_stamp'));
 });
 
-console.log(`\nbl-reflection: ${passed} passed`);
+console.log(`\nreflection: ${passed} passed`);

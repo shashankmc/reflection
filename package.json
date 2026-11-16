@@ -1,15 +1,15 @@
 {
-  "name": "@legalblocks/bl-reflection",
+  "name": "@legalblocks/reflection",
   "version": "0.1.0",
   "description": "Structured reflection; anti rubber-stamp guardrail blocks empty attestations",
   "private": false,
   "type": "module",
   "license": "MIT",
   "legalblocks": {
-    "package_id": "bluelab.reflection",
+    "package_id": "reflection",
     "manifest": "package.manifest.json",
     "execution_type": "backend",
-    "provides_screen": "bluelab.reflect"
+    "provides_screen": "reflect"
   },
   "main": "reflection.ts",
   "files": [

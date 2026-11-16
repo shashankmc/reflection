@@ -2,12 +2,12 @@
 
 > Structured reflection; anti rubber-stamp guardrail blocks empty attestations
 
-**LegalBlocks module package** `bluelab.reflection` v0.1.0
+**LegalBlocks module package** `reflection` v0.1.0
 
-- **Execution**: backend (provides screen `bluelab.reflect`)
+- **Execution**: backend (provides screen `reflect`)
 - **Entrypoint**: `reflection.ts`
-- **Inputs**: `bluelab.memo` (optional)
-- **Outputs**: `bluelab.reflection`
+- **Inputs**: `memo` (optional)
+- **Outputs**: `reflection`
 - **Artifact I/O**: via [`@legalblocks/module-runtime`](../module-runtime) (configurable adapter: localStorage by default, HTTP endpoint when configured)
 
 

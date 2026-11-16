@@ -1,5 +1,5 @@
 /**
- * bl-reflection — BlueLab Step 6. A structured reflection on AI use: where the
+ * reflection — compliance step 5. A structured reflection on AI use: where the
  * student relied on AI, what they corrected, and where professional judgement was
  * required that AI could not supply.
  *
@@ -8,7 +8,7 @@
  * student must attest they reviewed AI output, and at least one concrete correction
  * or professional-judgement case must be documented.
  *
- * Self-contained (mirrors the other BlueLab modules).
+ * Self-contained (mirrors the other compliance modules).
  */
 
 export interface ReflectionPayload {
